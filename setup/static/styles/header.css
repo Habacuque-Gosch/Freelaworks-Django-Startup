@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
+
+:root {
+    --destaque: #00B1FD;
+    --texto: #F2F2DD;
+    --fundo-header: #407BFF;
+}
+
+.header {
+    background-color: var(--fundo-header);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 80px;
+    gap: 35em;
+    width: 100%;
+    box-shadow: 5px 3px 5px rgb(168, 167, 167);
+    margin-bottom: 2.5em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    color: var(--texto);
+    margin-left: 2.81em;
+    user-select:none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nome-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.6em;
+}
+
+.pipe {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.empresas-vagas {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+.filtros {
+    display: flex;
+    align-items: column;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+}
+
+form select {
+    outline: unset;
+    background-color: #dad7d7;
+    text-align: left;
+    font-family: 'Archivo', sans-serif;
+    padding: 12px 15px;
+    width: auto;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    -webkit-appearance: none;
+}
+
+form select:focus {
+    border: 1px solid var(--fundo-header);
+}
+.form-filtros {
+    margin-top: 1.6em;
+}

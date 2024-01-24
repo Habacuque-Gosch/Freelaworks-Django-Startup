@@ -1,0 +1,25 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+<section class="galeria">
+    <form action="{% url 'cadastro_empresa' %}" method="post" >
+        {% csrf_token %}
+        <div class="row">
+            {% for field in form.visible_fields %}
+            <div class="col-12 col-lg-12" style="margin-bottom: 10px;">
+                <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+                {{ field }}
+            </div>
+            {% for error in field.errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+            {% endfor %}
+            {% endfor %}
+            <div>
+                <button class="btn btn-success col-12" style="margin-top: 1em;" type="submit">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <form action="{% url 'editar_vaga' vaga_id %}" method="post">
+        {% csrf_token %}
+        <div>
+            {% for field in form.visible_fields %}
+            <div>
+                <label for="{{ field.id_for_label }}">{{field.label}}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            <div>
+                <button class="btn btn-success col-12" style="margin-top: 1em;" type="submit">Salvar alteraçoes</button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}

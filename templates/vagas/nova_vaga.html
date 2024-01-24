@@ -1,0 +1,22 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+<section class="campos">
+    <form action="{% url 'nova_vaga' %}" method="post">
+        {% csrf_token %}
+        <div >
+            {% for field in form.visible_fields %}
+            <div class="labels-input">
+                <label for="{{ field.id_for_label }}">{{field.label}}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            <button type="submit" >Salvar</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
+
+

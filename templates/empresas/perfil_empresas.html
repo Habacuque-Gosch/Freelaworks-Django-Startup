@@ -1,0 +1,10 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+    <p>{{ user }}</p>
+    <a href="{% url 'logout_empresa' %}">Logout</a>
+    <br>
+    <a href="{% url 'nova_vaga' %}">Adicionar vaga</a>
+    <br>
+    <a href="{% url 'minhas_vagas' %}">Minhas vagas</a>
+{% endblock %}
