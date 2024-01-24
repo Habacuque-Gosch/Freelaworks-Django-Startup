@@ -1,4 +1,4 @@
-![Django Admin CRM](https://github.com/Habacuque-Gosch/Terceiriza-BR-Django-Startup/assets/119132706/b185e27d-df71-434a-ab57-3757d2f0466b)<h1>Terceiriza BR</h1>
+<h1>Terceiriza BR</h1>
 
 <h2>Bem vindo(ao) meu repositório</h2>
 
