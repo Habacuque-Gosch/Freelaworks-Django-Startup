@@ -1,4 +1,4 @@
-<h1>Terceiriza BR</h1>
+![Django Admin CRM](https://github.com/Habacuque-Gosch/Terceiriza-BR-Django-Startup/assets/119132706/b185e27d-df71-434a-ab57-3757d2f0466b)<h1>Terceiriza BR</h1>
 
 <h2>Bem vindo(ao) meu repositório</h2>
 
@@ -30,9 +30,9 @@ Terceiriza BR é uma plataforma que eu estou participando do desenvolvimento em 
  
 <div align='center'>
     <h1>Aplicação<h1>
-      <img src="index.png">
-      <img src="Django Admin.png">
-      <img src="Django Admin CRM.png">
+      <img src="medias-for-git/index.png">
+      <img src="medias-for-git/Django Admin.png">
+      <img src="medias-for-git/Django Admin CRM.png">
    <a href="">Acessar</a>
 </div>
             
