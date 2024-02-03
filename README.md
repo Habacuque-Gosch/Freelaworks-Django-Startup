@@ -1,4 +1,4 @@
-<h1>Terceiriza BR</h1>
+<h1>Freelaworks</h1>
 
 <h2>Bem vindo(ao) meu repositório</h2>
 
@@ -6,7 +6,7 @@
 
 ## Descrição do projeto
  <p align="justify">
-Terceiriza BR é uma plataforma que eu estou participando do desenvolvimento em uma Startup que tem como objetivo fazer um match entre empresas e candidatos, nessa plataforma é possivel que empresas cadastrem suas vagas e que os candidatos cadastrem seu CV. Além disso a plataforma conta com um sistema de busca avançado que busca por: Cargos, Palavras-chaves, empresas. Também conta com sistema de filtro para que a busca seja mais especifica.
+Freelaworks é uma plataforma do qual estou desenvolvendo o back end para o MVP em uma Startup que tem como objetivo fazer um match entre empresas e candidatos, freelancers. Nesta plataforma os candidatos cadastraram o seu resumo(biografia) e suas experiências profissionais e do outro lado as empresas/pessoas cadastraram suas vagas/projetos.
 <div>
  
 ## Funcionalidades
