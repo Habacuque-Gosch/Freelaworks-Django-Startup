@@ -30,10 +30,8 @@ Freelaworks é uma plataforma do qual estou desenvolvendo o back end para o MVP 
  
 <div align='center'>
     <h1>Aplicação<h1>
-      <img src="medias-for-git/capa.png">
-      <img src="medias-for-git/index.png">
-      <img src="medias-for-git/Django Admin.png">
-      <img src="medias-for-git/Django Admin CRM.png">
+      <img src="capa.png">
+      <img src="index.png">
    <a href="">Acessar</a>
 </div>
             
