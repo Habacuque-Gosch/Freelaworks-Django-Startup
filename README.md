@@ -30,6 +30,7 @@ Terceiriza BR é uma plataforma que eu estou participando do desenvolvimento em 
  
 <div align='center'>
     <h1>Aplicação<h1>
+      <img src="medias-for-git/capa.png">
       <img src="medias-for-git/index.png">
       <img src="medias-for-git/Django Admin.png">
       <img src="medias-for-git/Django Admin CRM.png">
