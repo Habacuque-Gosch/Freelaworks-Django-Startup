@@ -30,8 +30,18 @@ Freelaworks é uma plataforma do qual estou desenvolvendo o back end para o MVP 
  
 <div align='center'>
     <h1>Aplicação<h1>
-      <img src="capa.png">
+      <img src="capa mv.gif">
+      <img src="capa 4k.png">
+      <img src="login.png">
       <img src="index.png">
+     <img src="perfil.png">
+     <img src="index cndd.png">
+     <img src="dash.png">
+     <img src="mobile/capa.png">
+     <img src="mobile/login.png">
+     <img src="mobile/index.png">
+     <img src="mobile/perfil.png">
+     <img src="mobile/index cndd.png">
    <a href="">Acessar</a>
 </div>
             
