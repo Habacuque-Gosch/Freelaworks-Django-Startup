@@ -32,11 +32,11 @@ Freelaworks é uma plataforma do qual estou desenvolvendo o back end para o MVP 
     <h1>Aplicação<h1>
       <img src="capa mv.gif">
       <img src="capa 4k.png">
-      <img src="login.png">
-      <img src="index.png">
-     <img src="perfil.png">
-     <img src="index cndd.png">
-     <img src="dash.png">
+      <img src="desktop/login.png">
+      <img src=desktop/"index.png">
+     <img src="desktop/perfil.png">
+     <img src="desktop/index cndd.png">
+     <img src="desktop/dash.png">
      <img src="mobile/capa.png">
      <img src="mobile/login.png">
      <img src="mobile/index.png">
