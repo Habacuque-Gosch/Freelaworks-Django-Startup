@@ -42,7 +42,6 @@ Freelaworks é uma plataforma do qual estou desenvolvendo o back end para o MVP 
     <img src="mobile/index.png">
     <img src="mobile/perfil.png">
     <img src="mobile/index cndd.png">
-   <a href="">Acessar</a>
 </div>
             
 ## Ferramentas utilizadas
