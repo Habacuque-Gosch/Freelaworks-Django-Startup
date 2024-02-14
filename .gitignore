@@ -1,5 +1,3 @@
 
-.gitinore
+
 .env
-.build_files.sh
-.vercel.json
