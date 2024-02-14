@@ -1,0 +1,106 @@
+
+.card-vaga {
+    border-radius: 12px;
+    background-color: #f3eeee;
+    border: solid 1.5px var(--quaternaria);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 1.2em;
+    padding: 1.8em;
+    height: auto;
+    width: 710px;
+    gap:1em;
+    margin-bottom: 1.6em;
+}
+.cargo {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.empresa {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    width: 700px;
+}
+.salario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Archivo', sans-serif;
+    width: 180px;
+    height: 25px;
+    color: #ffffff;
+    background-color: rgba(30, 212, 60, 0.753);
+    border-radius: 5px;
+}
+.descricao {
+    color: #1c1c1d;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    width: 700px;
+    text-align: justify;
+}
+.data {
+    color: #1c1c1d;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px; 
+}
+.candidatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F2DD;
+    background-color:var(--fundo-header);
+    font-family: 'Archivo', sans-serif;
+    border: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.canditatar:hover {
+    background-color: var(--quinta);
+}
+
+@media (max-width: 428px) {
+    .card-vaga {
+        padding-left: 1.2em;
+        padding: 1.2em;
+        width: 80%;
+    }
+    .cargo {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+    }
+    .empresa {
+        gap: 8px;
+        font-size: 16px;
+        width: 80%;
+    }
+    .salario {
+        font-size: 14px;
+        width: 45%;
+        height: 25px;
+        border-radius: 3px;
+    }
+    .descricao {
+        font-size: 16px;
+        width: 100%;
+    }
+    .data {
+        font-size: 14px; 
+    }
+    .candidatar {
+        width: 40%;
+        height: 40px;
+        font-size: 16px;
+    }
+}

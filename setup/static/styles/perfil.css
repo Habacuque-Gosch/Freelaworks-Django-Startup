@@ -1,0 +1,91 @@
+
+.card-perfil {
+    border-radius: 12px;
+    background-color: #f3eeee;
+    border: solid 1.5px var(--quaternaria);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 1.2em;
+    padding: 1.8em;
+    height: auto;
+    width: 710px;
+    gap:1em;
+    margin-top: 8em;
+    margin-bottom: 1.6em;
+}
+.lapis{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 42em;
+}
+.card-perfil a{
+    width: 30px;
+    height: 30px;
+
+}
+.nome-completo {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: -2em;
+    width: 660px;
+}
+.titulo-profissional {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 550;
+    font-size: 18px;
+    color: var(--primaria);
+}
+.card-perfil h2{
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    color: #444343;
+}
+.descricao {
+    color: #1c1c1d;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    width: 700px;
+    text-align: justify;
+}
+
+.button-sair {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+    text-decoration: none;
+    background-color: #323235;
+    color: white;
+    padding: 12px;
+    border-radius: 7px;
+
+}
+
+@media (max-width: 428px) {
+    .card-perfil {
+        padding-left: 1.2em;
+        padding: 1.2em;
+        width: 80%;
+    }
+    .lapis {
+        margin-left: 18em;
+    }
+    .lapis img {
+        width: 25px;
+        height: 25px;
+    }
+    .nome-completo {
+        width: 260px;
+    }
+    .descricao {
+        font-size: 16px;
+        width: 100%;
+    }
+}

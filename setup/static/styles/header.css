@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
+
+@import url(filtros.css);
+
+:root {
+    --destaque: #00B1FD;
+    --texto: #ffffff;
+    --white: #ffffff;
+    --fundo-header: #128caa;
+}
+
+.header {
+    background-color: var(--fundo-header);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 70px;
+    gap: 41em;
+    width: 100%;
+    box-shadow: 5px 3px 5px rgb(168, 167, 167);
+    margin-bottom: 2.5em;
+    top: 0px;
+    position: fixed;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    color: var(--texto);
+    margin-left: 2.81em;
+    user-select:none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nome-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.2em;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* The actual popup */
+.popup .popuptext {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    visibility: hidden;
+    gap: 1em;
+    width: 360px;
+    background-color: #ffffff;
+    color: #fcfcfc;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    padding: 1em;
+    left: 50%;
+    margin-left: -200px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #6d78e0 transparent transparent transparent;
+    padding: 1em;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+
+.titulo-notificacao {
+    font-size: 1em;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #2c2a2a;
+    margin-left: 8em;
+    margin-bottom: 1em;
+}
+.notificacao {
+    color: var(--fundo-header);
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    z-index: 1;
+    gap: 10px;
+    border-radius: 7px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -3.8em;
+}
+
+.dropdown-content a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.pipe {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.empresas-vagas {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+@media (max-width: 428px) {
+
+    .header {
+        height: 60px;
+        gap: 7em;
+        width: 100%;
+        box-shadow: 5px 3px 5px rgb(168, 167, 167);
+        margin-bottom: 2.5em;
+        top: 0px;
+    }
+
+    .logo {
+        gap: 12px;
+        margin-left: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .logo img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nome-logo {
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--texto);
+    }
+    
+    .popup {
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .empresas-vagas {
+        display: none;
+    }
+    .pipe {
+        display: none;
+    }
+}

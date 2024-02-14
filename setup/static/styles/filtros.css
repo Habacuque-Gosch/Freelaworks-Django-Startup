@@ -1,0 +1,45 @@
+.filtros {
+    display: flex;
+    align-items: column;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+}
+
+form select {
+    outline: unset;
+    background-color: #dad7d7;
+    text-align: left;
+    font-family: 'Archivo', sans-serif;
+    padding: 12px 15px;
+    width: auto;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    -webkit-appearance: none;
+}
+
+form select:focus {
+    border: 1px solid var(--fundo-header);
+}
+.form-filtros {
+    margin-top: 1.6em;
+}
+
+@media (max-width: 428px) {
+    .filtros {
+        gap: 8px;
+    }
+    form select {
+        font-size: 12px;
+        padding: 12px 15px;
+        width: auto;
+        -webkit-appearance: none;
+    }
+    
+    form select:focus {
+        border: 1px solid var(--fundo-header);
+    }
+    .form-filtros {
+        margin-top: 1.6em;
+    }
+}
