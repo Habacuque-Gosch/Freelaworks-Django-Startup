@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca vagas de emprego | Freelaworks</title>
+    <link rel="stylesheet" href="{% static '/styles/header.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones/logo.png' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{% static '/assets/icones/logo.png' %}" width="50px" height="50px" alt="logo">
+            <a class="nome-logo" href="{% url 'candidatos' %}">Freelaworks</a>
+        </div>
+        <div class="menu">
+            <!-- <a href=""><img src="{% static '/assets/icones/notificacao.svg' %}" width="25px" height="25px" alt="notificacao"></a>
+            <a href=""><img src="{% static '/assets/icones/configuracao.svg' %}" width="25px" height="25px" alt="configuracao"></a> -->
+            <div class="dropdown">
+                <span><a href="{% url 'perfil_empresa' user %}"><img src="{% static '/assets/icones/user.svg' %}" width="25px" height="25px" alt="user"></a></span>
+                <div class="dropdown-content">
+                    <a href="{% url 'perfil_empresa' user %}">Perfil</a>
+                    <a href="{% url 'logout_empresa' %}">Sair</a>
+                </div>
+              </div>
+            <p class="pipe">|</p>
+            <a class="empresas-vagas" href="{% url 'dashboard' %}">Empresas/Anunciar vagas</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<div class="buscar-filtrar-cargos">
+    <form action="{% url 'buscar_candidatos' %}">
+        <input class="entrada" type="text" name="buscar" placeholder="Titulo profissional, serviço, área de atuação">
+        <button class="search-button-click" type="submit">
+            <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
+        </button>
+    </form>
+    <form action="{% url 'filtrar_candidatos' %}" class="form-filtros">
+        <div class="filtros">
+            <select id="tipo" name="tipo">
+                <option class="tipo" value="">Área de atuação</option>
+                <option value="pj">PJ</option>
+                <option value="diaristas">Temporário</option>
+                <option value="freelancer">Freelancer</option>
+            </select>
+            <select id="local" name="local">
+                <option value="">Local</option>
+                <!-- {% for vagas in vagas %}
+                <option value="{{vagas.local}}"> {{vagas.local}} </option>
+                {% endfor %} -->
+                <option value="remoto">Remoto</option>
+            </select>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<section >
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="login">
+                {% for field in form.visible_fields %}
+                <div class="form-group">
+                    <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <button class="btn" type="submit" style="margin-top: 1em;">Recuperar senha</button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}

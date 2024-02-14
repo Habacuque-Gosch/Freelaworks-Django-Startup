@@ -1,0 +1,4 @@
+{% load static %}
+{% for vagas in vagas %}
+<a href="http://127.0.0.1:8000/buscar?buscar={{ vagas.nome }}" >{{ vagas.nome }}<br></a>
+{% endfor %}

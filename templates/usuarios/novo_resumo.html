@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<section class="campos">
+    <form action="{% url 'novo_resumo' %}" method="post">
+        {% csrf_token %}
+        <div class="login">
+            {% for field in form.visible_fields %}
+            <div class="form-group">
+                <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            <div>
+                <button class="btn" style="margin-top: 1em;" type="submit">Salvar alteraçoes</button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}

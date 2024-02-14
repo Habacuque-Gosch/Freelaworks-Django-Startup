@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar Projetos e Trabalhos | Freelaworks</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones/logo.png' %}">
+</head>
+<body>
+    {% include 'empresas/partials_empresa/_header_empresa.html' %}
+    <!-- {% include 'partials/_alertas.html' %} -->
+    {% block content%}{% endblock %}
+</body>
+{% include 'empresas/partials_empresa/_footer_empresa.html' %}
+</html>

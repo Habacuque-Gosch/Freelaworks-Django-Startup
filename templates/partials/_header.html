@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca vagas de emprego | Freelaworks</title>
+    <link rel="stylesheet" href="{% static '/styles/header.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones/logo.png' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{% static '/assets/icones/logo.png' %}" width="50px" height="50px" alt="logo">
+            <a class="nome-logo" href="/">Freelaworks</a>
+        </div>
+        <div class="menu">                           
+            <div class="popup" onclick="myFunction()"><img src="{% static '/assets/icones/notificacao.svg' %}" width="25px" height="25px">
+                <span class="popuptext" id="myPopup">
+                    <div class="div-titulo-notificacao">
+                        <h2 class="titulo-notificacao">Notificações</h2>
+                    </div>
+                    {% if vagas %}
+                    {% for vagas in vagas %}
+                        <a class="notificacao" href="http://127.0.0.1:8000/buscar?buscar={{ vagas.nome }}" >{{ vagas.nome }}<br></a>
+                    {% endfor %}
+                    {% else %}
+                    <p class="data">Sem notificações</p>
+                    {% endif %}
+                </section>
+                <section class="top-catagory-area section-padding-20-0">
+                    <div class="container">
+                        {% if  vagas.has_other_pages %}
+                        <ul class="pagination">
+                            {% if  vagas.has_previous %}
+                            <li class="page-item">
+                                <a href="?page={{ vagas.previous_page_number}}" class="page-link">&laquo;</a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link">&laquo;</a>
+                            </li>
+                            {% endif %}
+                            {% for pagina in vagas.paginator.page_range %}
+                            {% if vagas.number == pagina %}
+                            <li class="page-item active">
+                                <a class="page-link">{{ pagina }}</a>
+                            </li>
+                            {% else %}
+                            <li class="page-item">
+                                <a href="?page={{pagina}}" class="page-link">{{ pagina }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            {% if vagas.has_next %}
+                            <li class="page-item">
+                                <a href="?page={{ vagas.next_page}}" class="page-link">&raquo;</a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link">&raquo;</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </section>
+                </span>
+            </div>
+            <script>
+            function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+            }
+            </script>
+              <div class="dropdown">
+                <span><a href="{% url 'perfil' user %}"><img src="{% static '/assets/icones/user.svg' %}" width="25px" height="25px" alt="user"></a></span>
+                <div class="dropdown-content">
+                    <a href="{% url 'perfil' user %}">Perfil</a>
+                    <a href="{% url 'logout' %}">Sair</a>
+                </div>
+              </div>
+            <p class="pipe">|</p>
+            <a class="empresas-vagas" href="{% url 'login_empresa' %}">Empresas/Anunciar vagas</a>
+        </div>
+    </div>
+</body>
+</html>

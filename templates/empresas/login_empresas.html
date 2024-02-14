@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<section >
+    <form action="{% url 'login_empresa' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="login">
+                <img class="logo-img" style="margin-bottom: 1em;" src="{% static '/assets/icones/logo.png' %}" width="60px" height="60px" alt="logo">
+                <h1 class="titulo-login">Login</h1>
+                {% for field in form.visible_fields %}
+                <div class="form-group">
+                    <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <button type="submit" style="margin-top: 1em;" class="btn">Entrar</button>
+                <br>
+                <p class="cadastro">Ainda não possui uma conta? <a class="cadastro" href="{% url 'cadastro_empresa' %}" style="margin-top: 1em;">Cadastre-se</a></p>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
+

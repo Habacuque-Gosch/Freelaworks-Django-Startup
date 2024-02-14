@@ -1,0 +1,29 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<section class="tudo">
+    {% if resumo %}
+    {% for resumo in resumo %}
+        <div class="card-perfil">
+            <div class="lapis">
+                <a href="{% url 'editar_perfil' resumo.id %}"><img src="{% static '/assets/icones/lapis.svg' %}" alt="ícone de lapis" width="30px" height="30px"></a>
+            </div>
+            <p class="nome-completo">{{ resumo.nome_completo }}</p>
+            <p class="titulo-profissional">{{ resumo.titulo_profissional }}</p>
+            <h2>Sobre mim:</h2>
+            <p class="descricao">{{ resumo.descricao_pessoal }}</p>
+            <h2>Resumo da experiência profissional:</h2>
+            <p class="descricao">{{ resumo.resumo_experiencia_profissional }}</p>
+        </div>
+
+    {% endfor %}
+    {% else %}
+    <p class="data">Seja Bem-vindo(a) {{ user }}</p>
+    <br>
+    <a href="{% url 'novo_resumo' %}">Adicionar resumo</a>
+    {% endif %}
+    <br>
+    <a class="button-sair" href="{% url 'logout' %}">Sair</a>
+</section>
+{% endblock %}

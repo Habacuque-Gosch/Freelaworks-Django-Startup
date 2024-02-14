@@ -1,0 +1,27 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+<section  class="tudo" style="margin-top: 8em;">
+    {% if vagas %}
+    {% for vagas in vagas %}
+        <div class="card-vaga">
+            <p class="cargo">{{ vagas.nome }}</p>
+            <div class="empresa">
+                <p>{{ vagas.usuario }}</p>
+                <p>{{ vagas.tipo_de_vaga }}</p>
+                <p>{{ vagas.local }}</p>
+            </div>
+            <p class="salario">{{ vagas.salario }}</p>
+            <p class="descricao">{{ vagas.descricao }}<p>
+            <p class="data">{{ vagas.data_publicada }}</p>
+            <a href="{% url 'editar_vaga' vagas.id %}">Editar vaga</a>
+            <a href="{% url 'deletar_vaga' vagas.id %}">Deletar vaga</a>
+        </div>
+    {% endfor %}
+    {% else %}
+    <a href="{% url 'nova_vaga' %}">Adicionar vaga</a>
+    <br>
+    <p class="data">Você ainda não possui vagas cadastradas</p>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/loader.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones/lgt.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/assets/icones/logo.png' %}">
+    <title>Freelaworks</title>
+</head>
+
+<body>
+    <section class="section-loader">
+        <div class="div-loader">
+            <h1 class="titulo-home">Freelaworks</h1>
+            <span class="loader"></span>
+        </div>
+        <script>
+        function redirect()
+        {
+            window.location.href = "{% url 'index' %}"
+        }
+        setTimeout(redirect, 3000);
+        </script>
+    </section>
+</body>
+
+</html>

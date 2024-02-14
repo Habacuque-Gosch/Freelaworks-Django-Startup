@@ -1,0 +1,58 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/_menu_candidato.html' %}
+<section class="tudo">
+    {% if resumo %}
+    {% for resumo in resumo %}
+    <div class="card-vaga">
+        <p class="cargo">{{ resumo.nome_completo }}</p>
+        <p>{{ resumo.titulo_profissional }}</p>
+        <p class="descricao">{{ resumo.descricao_pessoal }}</p>
+        <p class="descricao">{{ resumo.resumo_experiencia_profissional }}</p>
+        <a class="candidatar" href="https://api.whatsapp.com/send/?phone=55{{resumo.telefone}}&text=Olá">Conectar-se</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="data">Candidatos não encontrados</p>
+    {% endif %}
+</section>
+</section>
+<section class="top-catagory-area section-padding-20-0">
+    <div class="container">
+        {% if  resumo.has_other_pages %}
+        <ul class="pagination">
+            {% if  resumo.has_previous %}
+            <li class="page-item">
+                <a href="?page={{ resumo.previous_page_number}}" class="page-link">&laquo;</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link">&laquo;</a>
+            </li>
+            {% endif %}
+            {% for pagina in resumo.paginator.page_range %}
+            {% if resumo.number == pagina %}
+            <li class="page-item active">
+                <a class="page-link">{{ pagina }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a href="?page={{pagina}}" class="page-link">{{ pagina }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% if resumo.has_next %}
+            <li class="page-item">
+                <a href="?page={{ resumo.next_page}}" class="page-link">&raquo;</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link">&raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

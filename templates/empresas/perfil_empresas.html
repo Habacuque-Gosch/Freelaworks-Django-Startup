@@ -1,0 +1,14 @@
+{% extends 'empresas/partials_empresa/base_empresa.html' %}
+{% load static %}
+{% block content %}
+<section style="margin-bottom: 18em;" class="tudo">
+    <p style="margin-top: 8em;">Seja Bem-vindo(a) {{ user }}</p>
+    <br>
+    <br>
+    <a href="{% url 'nova_vaga' %}">Adicionar vaga</a>
+    <br>
+    <a href="{% url 'dashboard' %}">Dashboard</a>
+    <br>
+    <a class="button-sair" href="{% url 'logout_empresa' %}">Sair</a>
+</section>
+{% endblock %}
