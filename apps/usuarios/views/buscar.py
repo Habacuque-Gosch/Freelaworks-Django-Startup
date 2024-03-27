@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from apps.usuarios.models import Resumo
 
-
+    
 def buscar_candidatos(request):
     user = request.user
     if not user.is_authenticated:

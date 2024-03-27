@@ -117,7 +117,6 @@ def candidatar(request, vaga_id):
     user = request.user
     try:
         candidato = get_list_or_404(Resumo, usuario_edit=user)
-
     except:
         messages.error(request, "Preencha seu perfil")
         return redirect('perfil', user)
