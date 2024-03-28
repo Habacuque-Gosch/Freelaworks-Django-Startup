@@ -34,7 +34,8 @@ def index(request):
     return render(request, 'vagas/index.html', {"vagas": vagas_por_pagina, "user": user, "vagas_notificacao": vagas_por_pagina })
 
 def nova_vaga(request):
-    if not request.user.is_authenticated:
+    current_user = request.user
+    if not current_user.is_authenticated:
         messages.error(request, "Usuário não logado")
         return redirect('login')
     
@@ -42,6 +43,8 @@ def nova_vaga(request):
     if request.method == 'POST':
         form = VagasFormsSave(request.POST)
         if form.is_valid():
+            form = form.save(commit=False)
+            form.usuario = current_user
             form.save()
             messages.success(request, "Vaga cadastrada com sucesso")
             return redirect('dashboard')

@@ -32,7 +32,7 @@ class VagasForms(forms.ModelForm):
 class VagasFormsSave(forms.ModelForm):
     class Meta:
         model = Vagas
-        exclude = ['publicada', 'data_publicada']
+        exclude = ['publicada', 'data_publicada', 'usuario']
         labels = {
             'descricao' : 'Descrição',
             # 'data_publicada' : 'Data de registro',
@@ -52,6 +52,6 @@ class VagasFormsSave(forms.ModelForm):
             #     attrs={
             #         'type': 'date', 
             #         'class': 'form-control'}),
-            'usuario': forms.Select(attrs={'class': 'campo-user'})
+            # 'usuario': forms.Select(attrs={'class': 'campo-user'})
         }
         
