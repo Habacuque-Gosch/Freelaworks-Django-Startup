@@ -172,7 +172,7 @@ to {opacity:1 ;}
 
     .header {
         height: 60px;
-        gap: 7em;
+        gap: 5em;
         width: 100%;
         box-shadow: 5px 3px 5px rgb(168, 167, 167);
         margin-bottom: 2.5em;
@@ -180,15 +180,18 @@ to {opacity:1 ;}
     }
 
     .logo {
-        gap: 12px;
-        margin-left: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        gap: 28%;
         margin-top: 1em;
         margin-bottom: 1em;
     }
 
     .logo img{
-        width: 40px;
-        height: 40px;
+        width: 65px;
+        height: 65px;
     }
     
     .nome-logo {
@@ -203,7 +206,7 @@ to {opacity:1 ;}
         display: none;
     }
     
-    .dropdown:hover .dropdown-content {
+    .dropdown {
         display: none;
     }
     .empresas-vagas {
