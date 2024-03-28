@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
 
 @import url(login_candidato.css);
+@import url(navegation_bar.css);
 @import url(buscar.css);
 @import url(vagas.css);
 @import url(perfil.css);

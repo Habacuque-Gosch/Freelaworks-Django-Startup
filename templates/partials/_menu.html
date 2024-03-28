@@ -1,12 +1,18 @@
 {% load static %}
 <div class="buscar-filtrar-cargos">
+
     <form action="{% url 'buscar' %}">
-        <input class="entrada" type="text" name="buscar" placeholder="Cargos, palavras-chaves ou empresa">
+
+        <input class="entrada" type="text" name="buscar" id="buscar" placeholder="Cargos, palavras-chaves ou empresa">
+        
         <button class="search-button-click" type="submit">
             <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
         </button>
+
     </form>
+
     <form action="{% url 'filtrar' %}" class="form-filtros">
+
         <div class="filtros">
             <select id="tipo" name="tipo">
                 <option class="tipo" value="">Tipo de vaga</option>
@@ -34,6 +40,7 @@
                 <img src="{% static '/assets/icones/filtro.svg' %}" width="45px" height="35px" padding= "6px" alt="ícone de search">
             </button>
         </div>
+
     </form>
     <!-- <form action="{% url 'filtrar' %}" class="form-control">
         <div class="filtros">
@@ -66,5 +73,7 @@
     </form> -->
 </div>
 <div class="line">
+
     <p class="vagas-buscadas">Vagas: {{ palavra }}</p>
+    
 </div>
