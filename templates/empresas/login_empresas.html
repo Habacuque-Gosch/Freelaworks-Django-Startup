@@ -17,6 +17,7 @@
 
     <form class="section-login-form" action="{% url 'login_empresa' %}" method="post">
         {% csrf_token %}
+        
         <div class="login">
             <img class="logo-img" style="margin-bottom: 1em;" src="{% static '/assets/icones/logo_f.png' %}" width="100px" height="100px" alt="logo">
             <h1 class="titulo-login">Login</h1>
@@ -30,7 +31,9 @@
             <br>
             <p class="cadastro">Ainda não possui uma conta? <a class="cadastro" href="{% url 'cadastro_empresa' %}" style="margin-top: 1em;">Cadastre-se</a></p>
         </div>
+
     </form>
+
 </section>
 {% endblock %}
 
