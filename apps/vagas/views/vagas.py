@@ -9,16 +9,16 @@ import stripe
 
 
 
-def loader(request):
-    if request.user.is_authenticated:
-        return redirect('index')
-    return render(request, 'partials/loader.html')
+# def loader(request):
+#     if request.user.is_authenticated:
+#         return redirect('index')
+#     return render(request, 'partials/loader.html')
 
-def home(request):
-    if request.user.is_authenticated:
-        return redirect('index')
+# def home(request):
+#     if request.user.is_authenticated:
+#         return redirect('index')
 
-    return render(request, 'partials/home.html')
+#     return render(request, 'partials/home.html')
 
 def index(request):
     user = request.user
