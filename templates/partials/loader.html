@@ -13,17 +13,22 @@
 
 <body>
     <section class="section-loader">
+
         <div class="div-loader">
             <h1 class="titulo-home">Freelaworks</h1>
             <span class="loader"></span>
         </div>
+
         <script>
+
         function redirect()
-        {
-            window.location.href = "{% url 'index' %}"
-        }
-        setTimeout(redirect, 3000);
+            
+            {
+                window.location.href = "{% url 'index' %}"
+            }
+            setTimeout(redirect, 3000);
         </script>
+        
     </section>
 </body>
 
