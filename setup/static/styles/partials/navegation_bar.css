@@ -42,11 +42,6 @@
     transition: .2s;
 }
 
-*:focus {
-    outline: none;
-    border: none;
-}
-
 
 @media (max-width: 428px) {
     .navegation-bar {
