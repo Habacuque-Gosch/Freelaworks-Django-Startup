@@ -1,10 +1,24 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block content %}
+
+{% if request.method == 'GET' %}
+
+<style>
+    .navegation-bar{
+        display: none;
+    }
+</style>
+
+{% endif %}
+
 <section class="section-login-form">
+
     <form class="section-login-form" action="{% url 'login' %}" method="post">
+
         {% csrf_token %}
         <div class="login">
+
             <img class="logo-img" style="margin-bottom: 1em;" src="{% static '/assets/icones/logo_f.png' %}" width="100px" height="100px" alt="logo">
             <h1 class="titulo-login">Login</h1>
             {% for field in form.visible_fields %}

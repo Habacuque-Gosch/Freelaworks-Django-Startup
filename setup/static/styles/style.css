@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Krona+One&display=swap');
 
+@import url(partials/header.css);
 @import url(login/login.css);
 @import url(partials/navegation_bar.css);
 @import url(buscar.css);
