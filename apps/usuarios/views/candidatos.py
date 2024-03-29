@@ -17,4 +17,4 @@ def candidatos(request):
     page = request.GET.get('page')
     resumo_por_pagina = paginator.get_page(page)
     
-    return render(request, 'partials/candidatos.html', {"resumo": resumo_por_pagina, "user": user})
+    return render(request, 'empresas/candidatos.html', {"resumo": resumo_por_pagina, "user": user})

@@ -1,11 +1,15 @@
 {% load static %}
-<div class="buscar-filtrar-cargos">
+<section class="section-buscar" id="buscar-section">
+
+<div class="div-buscar-filtrar-cargos" >
+
     <form action="{% url 'buscar_candidatos' %}">
-        <input class="entrada" type="text" name="buscar" placeholder="Titulo profissional, serviço, área de atuação">
+        <input class="entrada" type="text" name="buscar" id= "buscar" placeholder="Titulo profissional, serviço, área de atuação">
         <button class="search-button-click" type="submit">
             <img class="search-img" src="{% static '/assets/icones/lupa.svg' %}" alt="ícone de search">
         </button>
     </form>
+
     <form action="{% url 'filtrar_candidatos' %}" class="form-filtros">
         <div class="filtros">
             <select id="tipo" name="tipo">
@@ -23,4 +27,5 @@
             </select>
         </div>
     </form>
+
 </div>

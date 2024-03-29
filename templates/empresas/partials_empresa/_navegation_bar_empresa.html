@@ -1,0 +1,58 @@
+{% load static %}
+
+
+<nav class="navegation-bar">
+
+  <!-- <script>
+
+    var scrollTop = function() {
+      window.scrollTo(0, 0);
+    };
+
+  </script>
+
+  <button onclick="scrollTop">aaaaaaaa</button> -->
+
+  <a class="nav-item" href="{% url 'candidatos' %}">
+    <!-- <a href="javascript:history.back()"></a> -->
+    <img src="{% static '/assets/feather/home.svg' %}" width="35"></i><span>Início</span>
+  </a>
+  
+  <a class="nav-item" href="#buscar">
+    <img src="{% static '/assets/feather/search.svg' %}" width="35"></i><span>Buscar</span>
+  </a>
+  
+  <a class="nav-item" href="{% url 'perfil_empresa' user %}">
+    <img src="{% static '/assets/feather/user.svg' %}" width="35"></i><span>Perfil</span>
+  </a>
+  
+</nav>
+
+<script>
+  feather.replace();
+  document.querySelector(".nav-item").focus();
+</script>
+
+<!-- <div class="itens">
+
+    <div class="menu">
+        <p>Home</p>
+    </div>
+
+    <div class="menu">
+        <p>Home</p>
+    </div>
+
+    <div class="menu">
+        <p>Home</p>
+    </div>
+
+    <div class="menu">
+        <p>Home</p>
+    </div>
+
+    <div class="menu">
+        <p>Home</p>
+    </div>
+
+</div> -->
