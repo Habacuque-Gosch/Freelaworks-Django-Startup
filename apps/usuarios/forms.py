@@ -124,8 +124,8 @@ class ResumoFormsSave(forms.ModelForm):
             'nome_completo': forms.TextInput(attrs={'class': 'campo-user'}),
             'telefone': forms.TextInput(attrs={'class': 'campo-user'}),
             'titulo_profissional': forms.TextInput(attrs={'class': 'campo-user'}),
-            'descricao_pessoal': forms.Textarea(attrs={'class': 'form-control'}),
-            'resumo_experiencia_profissional': forms.Textarea(attrs={'class': 'form-control'}),
+            'descricao_pessoal': forms.Textarea(attrs={'class': 'descricao-pessoal'}),
+            'resumo_experiencia_profissional': forms.Textarea(attrs={'class': 'resumo-experiencia'}),
             # 'pago': forms.TextInput(attrs={'class': 'form-control'}),
             
         }

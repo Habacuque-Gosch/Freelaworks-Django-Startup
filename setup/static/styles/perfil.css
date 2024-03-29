@@ -74,6 +74,7 @@
         padding-left: 1.2em;
         padding: 1.2em;
         width: 80%;
+        margin-bottom: 1em;
     }
     .lapis {
         margin-left: 18em;
@@ -87,6 +88,6 @@
     }
     .descricao {
         font-size: 16px;
-        width: 100%;
+        width: 80%;
     }
 }

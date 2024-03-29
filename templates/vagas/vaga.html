@@ -2,26 +2,34 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_menu.html' %}
+
 <section class="tudo">
+
     {% if vagas %}
     {% for vagas in vagas %}
     {% for candidato in candidato %}
+
         <div class="card-vaga">
+
             <p class="cargo">{{ vagas.nome }}</p>
+
             <div class="empresa">
                 <p>{{ vagas.usuario }}</p>
                 <p>{{ vagas.tipo_de_vaga }}</p>
                 <p>{{ vagas.local }}</p>
             </div>
+
             <p class="salario">{{ vagas.salario }}</p>
             <p class="descricao">{{ vagas.descricao }}<p>
             <p class="data">{{ vagas.data_publicada }}</p>
             <a class="candidatar" href="https://api.whatsapp.com/send/?phone=55{{vagas.numero_telefone}}&text=Olá me chamo {{candidato.nome_completo}} venho referente a vaga {{vagas.nome}}, {{ vagas.tipo_de_vaga }}, {{ vagas.local }}.%0D %0DSeguindo com a seguinte descricão: {{ vagas.descricao }}%0D %0DTipo de vaga: {{ vagas.tipo_de_vaga }}%0D%0DSalário: {{ vagas.salario }}">Aplicar</a>
             <!-- <a class="candidatar" href="{% url 'candidatar' vagas.id %}">Aplicar</a> -->
         </div>
+
     {% endfor %}
     {% endfor %}
     {% else %}
+
     <p class="data">Vaga não encontrada</p>
     {% endif %}
 </section>

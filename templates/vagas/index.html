@@ -2,26 +2,38 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_menu.html' %}
+
 <section class="tudo">
+
     {% if vagas %}
     {% for vagas in vagas %}
+
         <div class="card-vaga">
+
             <p class="cargo">{{ vagas.nome }}</p>
+
             <div class="empresa">
                 <p>{{ vagas.usuario }}</p>
                 <p>{{ vagas.tipo_de_vaga }}</p>
                 <p>{{ vagas.local }}</p>
             </div>
+
             <p class="salario">{{ vagas.salario }}</p>
             <p class="descricao">{{ vagas.descricao }}<p>
             <p class="data">{{ vagas.data_publicada }}</p>
             <a class="candidatar" href="{% url 'candidatar' vagas.id %}">Canditatar-se</a>
+
         </div>
+
     {% endfor %}
     {% else %}
+
     <p class="data">Vagas não encontradas</p>
+    
     {% endif %}
+
 </section>
+
 <section class="top-catagory-area section-padding-20-0">
     <div class="container">
         {% if  vagas.has_other_pages %}

@@ -6,6 +6,7 @@
 @import url(login/login.css);
 @import url(partials/navegation_bar.css);
 @import url(buscar.css);
+@import url(filtros.css);
 @import url(vagas.css);
 @import url(perfil.css);
 @import url(partials/loader.css);
@@ -36,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 5em;
 }
 
 /* .col-12 {
