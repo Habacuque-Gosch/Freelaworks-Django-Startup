@@ -163,7 +163,8 @@
     }
 
     .titulo-bem-vindo-login {
-
+        font-family: 'Poppins', sans-serif;
+        display: flex;
         font-size: 25px;
         text-decoration: none;
         font-weight: bold;

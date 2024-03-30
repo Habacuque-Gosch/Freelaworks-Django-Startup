@@ -39,7 +39,7 @@
     background-color: rgba(30, 212, 60, 0.753);
     border-radius: 5px;
 }
-.descricao {
+.descricao-vaga {
     color: #1c1c1d;
     font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     font-size: 16px;
@@ -91,7 +91,8 @@
         height: 25px;
         border-radius: 3px;
     }
-    .descricao {
+    .descricao-vaga {
+        font-family: 'Archivo', sans-serif;
         font-size: 16px;
         width: 100%;
     }
