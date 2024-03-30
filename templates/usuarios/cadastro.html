@@ -17,6 +17,16 @@
     <form class="section-login-form" action="{% url 'cadastro' %}" method="post" >
         {% csrf_token %}
         <div class="login">
+
+            <div class="titulo-e-imagem" style="margin-top: 0em; margin-bottom: 2em;">
+
+                <h1 class="titulo-bem-vindo-cadastro">Seu primeiro passo, para o seu primeiro trabalho na plataforma</h1>
+
+                <p class="descricao-cadastro">Vamos te ajudar a  encontrar trabalho</p>
+                <!-- <img class="img-cadastro" src="{% static '/assets/icones/no-job.png' %}" width="165px" height="165px" alt="logo"> -->
+            
+            </div>
+
             {% for field in form.visible_fields %}
             <div class="form-group">
                 <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
