@@ -1,8 +1,20 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block content %}
-<section>
-    <form action="{% url 'cadastro' %}" method="post" >
+
+{% if request.method == 'GET' %}
+
+<style>
+    .navegation-bar{
+        display: none;
+    }
+</style>
+
+{% endif %}
+
+
+<section class="section-login">
+    <form class="section-login-form" action="{% url 'cadastro' %}" method="post" >
         {% csrf_token %}
         <div class="login">
             {% for field in form.visible_fields %}
