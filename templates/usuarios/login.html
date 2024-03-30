@@ -19,19 +19,32 @@
         {% csrf_token %}
         <div class="login">
 
-            <img class="logo-img" style="margin-bottom: 1em;" src="{% static '/assets/icones/logo_f.png' %}" width="100px" height="100px" alt="logo">
-            <h1 class="titulo-login">Login</h1>
+            <div class="titulo-e-imagem">
+
+                <img class="logo-img" style="margin-bottom: 1em;" src="{% static '/assets/icones/logo_f.png' %}" width="100px" height="100px" alt="logo">
+                <h1 class="titulo-login">Login</h1>
+
+                <h1 class="titulo-bem-vindo">Bem-vindo de volta</h1>
+                <img class="img-bem-vindo" src="{% static '/assets/icones/bem-vindo.png' %}" width="100px" height="100px" alt="logo">
+            
+            </div>
+
             {% for field in form.visible_fields %}
             <div class="form-group">
                 <label class="form-label" for="{{ field.id_for_label }}">{{field.label}}</label>
                 {{ field }}
             </div>
             {% endfor %}
+            
             <button class="btn" type="submit" style="margin-top: 1em;">Entrar</button>
-            <br>
-            <p class="cadastro">Ainda não possui uma conta? <a class="cadastro" href="{% url 'cadastro' %}">Cadastre-se</a></p>
-            <br>
-            <p class="cadastro">És uma empresa? <a class="cadastro" href="{% url 'login_empresa' %}">Começa aqui!</a></p>
+
+            <div class="alternativas-de-login">
+                
+                <p class="cadastro">Ainda não possui uma conta? <a class="cadastro-destaque" href="{% url 'cadastro' %}">Cadastre-se</a></p>
+                
+                <p class="cadastro">És uma empresa? <a class="cadastro-destaque" href="{% url 'login_empresa' %}">Começa aqui!</a></p>
+            </div>
+
         </div>
     </form>
 </section>

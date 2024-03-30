@@ -11,7 +11,7 @@ class LoginForms(forms.Form):
         widget=forms.TextInput(
             attrs={
                 "class": "campo-user",
-                "placeholder" : "Ex: Habacuque Gosch"
+                "placeholder" : "Entre com seu usuário"
             }
         )
     )

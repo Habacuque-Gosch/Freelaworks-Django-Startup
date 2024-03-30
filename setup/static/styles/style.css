@@ -17,7 +17,7 @@
 }
 
 :root {
-    --destaque: #00B1FD;
+    --destaque: #128caa;
     --texto: #F2F2DD;
     --white: #ffffff;
     --fundo-header: #128caa;
@@ -26,6 +26,7 @@
     --terciaria: #096b87;
     --quaternaria: #055a76;
     --quinta: #004964;
+    --fundo-card-login: #F0F4F3;
 }
 
 body {

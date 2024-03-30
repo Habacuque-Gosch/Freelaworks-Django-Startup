@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 .section-login-form {
     display: flex;
     align-items: center;
@@ -22,7 +25,7 @@
     font-size: 35px;
     text-decoration: none;
     font-weight: bold;
-    color: var(--texto);
+    color: #ffff;
     margin-bottom: 1em;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .form-label {
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Archivo', sans-serif;
     font-size: 16px;
 }
@@ -48,28 +51,45 @@
     padding-left: 16px; 
     width: 420px;
     height: 45px;
-    border-radius: 7px;
+    border-radius: 12px;
 }
 .campo-user:focus{
-    outline: 1px solid #0053f8;
+    outline: 1px solid var(--destaque);
 }
 
 .btn {
-    background-color: #fdfeff;
-    color: rgb(0, 0, 0);
+    background-color: #ffff;
+    color: rgb(49, 48, 48);
     height:45px;
     width: 120px;
     padding: 6px;
     border: none;
     border-radius: 4px;
     margin-bottom: 1em;
+    font-family: "Poppins", "sans-serif";
+    font-size: 1em;
+}
+
+.alternativas-de-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
 }
 
 .cadastro {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    color: var(--texto);
+    color: #ffff;
 }
+.cadastro-destaque {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #ffff;
+}
+
 
 
 .form-control {
@@ -88,20 +108,18 @@
     outline: 1px solid #0053f8;
 }
 
+.img-bem-vindo{
+    display: none;
+}
+
+.titulo-bem-vindo {
+    display: none;
+}
 
 @media (max-width: 428px) {
 
-    .section-login-form {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    .section-login-form {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    .header {
+        display: none;
     }
 
     .titulo-login {
@@ -109,8 +127,33 @@
     }
 
     .logo-img {
-        width: 100px;
-        height: 100px;
+        display: none;
+    }
+
+    .section-login-form {
+        background-color: var(--fundo-card-login);
+    }
+
+    .titulo-e-imagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .img-bem-vindo{
+        display: flex;
+        width: 200px;
+        height: 200px;
+    }
+
+    .titulo-bem-vindo {
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--destaque);
     }
 
     .login {
@@ -118,8 +161,11 @@
         padding: 2em;
         width: 80%;
         margin-top: 3em;
+        background-color: var(--fundo-card-login);
     }
-
+    .form-label {
+        color: rgb(39, 39, 39);
+    }
     .campo-user {
         font-size: 16px;
         padding-left: 16px; 
@@ -127,5 +173,25 @@
         height: 45px;
         border-radius: 5px;
         width: 290px;
+    }
+
+    .btn {
+        background-color: var(--destaque);
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", "sans-serif";
+        font-size: 14px;
+    }
+
+    .alternativas-de-login {
+        gap: 7px;
+        margin-top: 10px;
+    }
+
+    .cadastro {
+        color: black;
+    }
+    .cadastro-destaque {
+        color: var(--destaque);
+        text-decoration: none;
     }
 }
