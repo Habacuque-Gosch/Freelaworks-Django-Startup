@@ -137,10 +137,6 @@
 
 @media (max-width: 428px) {
 
-    .header {
-        display: none;
-    }
-
     .titulo-login {
         display: none;
     }
