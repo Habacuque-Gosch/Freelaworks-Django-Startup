@@ -4,7 +4,6 @@ from apps.vagas.forms import VagasForms, VagasFormsSave
 from django.contrib import messages
 from django.conf import settings
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-import stripe
 
 
 
@@ -79,22 +78,22 @@ def deletar_vaga(request, vaga_id):
     messages.success(request, "vaga deletada com sucesso")
     return redirect('dashboard')
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
+# stripe.api_key = settings.STRIPE_SECRET_KEY
 
-def checkout(request):
-    try:
-        checkout_session = stripe.checkout.Session.create(
-            line_items=[
-                {
-                    'price': '{{PRICE_ID}}',
-                    'quantity': 1,
-                },
-            ],
-            mode='payment',
-            success_url='partials/home.html',
-            cancel_url='partials/home.html',
-        )
-    except Exception as e:
-        return str(e)
+# def checkout(request):
+#     try:
+#         checkout_session = stripe.checkout.Session.create(
+#             line_items=[
+#                 {
+#                     'price': '{{PRICE_ID}}',
+#                     'quantity': 1,
+#                 },
+#             ],
+#             mode='payment',
+#             success_url='partials/home.html',
+#             cancel_url='partials/home.html',
+#         )
+#     except Exception as e:
+#         return str(e)
 
-    return render(request, 'partials/home.html')
+#     return render(request, 'partials/home.html')
